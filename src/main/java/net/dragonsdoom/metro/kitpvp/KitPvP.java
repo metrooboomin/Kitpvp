@@ -3,6 +3,7 @@ package net.dragonsdoom.metro.kitpvp;
 import net.dragonsdoom.metro.kitpvp.Commands.KitCommand;
 import net.dragonsdoom.metro.kitpvp.GUI.PVPGUI;
 import net.dragonsdoom.metro.kitpvp.Kits.Archer;
+import net.dragonsdoom.metro.kitpvp.Kits.PvP;
 import net.dragonsdoom.metro.kitpvp.Kits.FishermanKit.Fisherman;
 import net.dragonsdoom.metro.kitpvp.Kits.FishermanKit.FishermanEVENT;
 import net.dragonsdoom.metro.kitpvp.Kits.Ghost.Ghost;
@@ -15,11 +16,13 @@ import net.dragonsdoom.metro.kitpvp.Kits.Ninja.Ninja;
 import net.dragonsdoom.metro.kitpvp.Kits.Ninja.NinjaEVENT;
 import net.dragonsdoom.metro.kitpvp.Kits.PikachuKIT.Pikachu;
 import net.dragonsdoom.metro.kitpvp.Kits.PikachuKIT.PikachuEVENT;
-import net.dragonsdoom.metro.kitpvp.Kits.PvP;
+import net.dragonsdoom.metro.kitpvp.Kits.Sniper.Sniper;
+import net.dragonsdoom.metro.kitpvp.Kits.Sniper.SniperEVENT;
 import net.dragonsdoom.metro.kitpvp.Kits.Tamer.Tamer;
 import net.dragonsdoom.metro.kitpvp.Kits.Tamer.TamerEvent;
 import net.dragonsdoom.metro.kitpvp.Kits.Turtle.Turtle;
 import net.dragonsdoom.metro.kitpvp.Utils.DeathEvent;
+
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -42,6 +45,7 @@ private static KitPvP instance;
         pm.registerEvents(new NinjaEVENT(), this);
         pm.registerEvents(new TamerEvent(), this);
         pm.registerEvents(new HulkEVENT(), this);
+        pm.registerEvents(new SniperEVENT(), this);
 
         //GUIS
         pm.registerEvents(new PVPGUI(), this);
@@ -61,6 +65,7 @@ private static KitPvP instance;
         getCommand("ninja").setExecutor(new Ninja());
         getCommand("hulk").setExecutor(new Hulk());
         getCommand("turtle").setExecutor(new Turtle());
+        getCommand("sniper").setExecutor(new Sniper()); // Pro: Is this a donor kit?
 
 
         //MISC

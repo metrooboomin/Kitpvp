@@ -99,5 +99,4 @@ public class PVPGUI implements Listener {
                 }
             }
         }
-    }
 }

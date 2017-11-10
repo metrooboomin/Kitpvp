@@ -1,0 +1,5 @@
+name: KitPvP
+version: ${project.version}
+main: net.dragonsdoom.metro.kitpvp.KitPvP
+authors: [Metro]
+description: KitPvP Plugin forked for DragonsDoom

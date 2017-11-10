@@ -619,4 +619,30 @@ public class GiveKit {
 
     }
 
+
+
+	public static void SniperKit(Player p) {
+        if (!p.hasPermission("kit.sniper")) {
+            p.sendMessage(KitMSG.noPerms);
+            return;
+        }
+        if (KitArrays.kitUsed.contains(p) && !p.isOp()) {
+            p.sendMessage(KitMSG.kitUsed);
+            return;
+        }
+        PlayerInventory inv = p.getInventory();
+        KitName.addKitUsed(p);
+        KitArrays.sniperUsed.add(p.getName());
+
+        // Clear inventory
+
+        KitName.cleanInventory(p);
+
+        //Message
+
+        p.sendMessage(KitMSG.prefix + "You have chosen kit" + ChatColor.DARK_AQUA + "Sniper" + ChatColor.GRAY + "!");
+        
+        //Pro: No idea what is all in this kit, leaving this blank for you.
+	}
+
 }

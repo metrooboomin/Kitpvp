@@ -173,7 +173,7 @@ public class KitCommand implements CommandExecutor {
                 mhulk.setLore(mlist);
                 hulk.setItemMeta(mhulk);
 
-
+                //GUI !!!
                 Inventory inv = Bukkit.createInventory(p, 54, "§cDragonsDoom §7> §6Kit Selector§f:");
 
                 inv.setItem(0, commands);

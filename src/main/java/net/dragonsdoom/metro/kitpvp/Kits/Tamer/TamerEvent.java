@@ -20,7 +20,7 @@ public class TamerEvent implements Listener {
         Action a = e.getAction();
         if (a == Action.RIGHT_CLICK_BLOCK || a == Action.RIGHT_CLICK_AIR) {
             if(KitArrays.tamerUsed.contains(p.getName())) {
-                if(p.getInventory().getItemInMainHand().getType() == Material.BONE) {
+                if(p.getItemInHand().getType() == Material.BONE) {
                     if (KitArrays.tamerWAIT.contains(p.getName())){
                         p.sendMessage(ChatColor.RED + "Wolf spawner is currently on cooldown!");
                     }else{

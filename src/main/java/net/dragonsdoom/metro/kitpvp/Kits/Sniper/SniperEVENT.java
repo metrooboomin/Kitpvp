@@ -23,8 +23,8 @@ public class SniperEVENT implements Listener {
     	if (e.getItem() == null || e.getItem().getType() != Material.BOW) // if the item is null or the item is not a bow, don't continue.
     		return;
         final Player p = (Player) e.getPlayer();
-        if (p.getInventory().getItemInMainHand().hasItemMeta() && p.getInventory().getItemInMainHand().getItemMeta().hasDisplayName()) {
-        	if (p.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.RED + "Sniper")) { //bow's name is Sniper in Red, changeable
+        if (p.getItemInHand().hasItemMeta() && p.getItemInHand().getItemMeta().hasDisplayName()) {
+        	if (p.getItemInHand().getItemMeta().getDisplayName().equals(ChatColor.RED + "Sniper")) { //bow's name is Sniper in Red, changeable
         		if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK) || e.getAction().equals(Action.RIGHT_CLICK_AIR)) {
         			KitArrays.bowDrawn.add(p.getName()); // adds them to the list of people drawing back a bow/holding back their bow.
         			

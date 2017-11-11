@@ -16,14 +16,14 @@ import java.util.HashMap;
 public class KangarooEVENT implements Listener {
     HashMap<Player, Integer> jumped = new HashMap<Player, Integer>();
 
-
+    @SuppressWarnings("deprecation")
     @EventHandler
     public void onInteract(PlayerInteractEvent e) {
         final Player p = e.getPlayer();
         Action a = e.getAction();
         if (a == Action.RIGHT_CLICK_BLOCK || a == Action.RIGHT_CLICK_AIR || a == Action.LEFT_CLICK_BLOCK || a == Action.LEFT_CLICK_AIR) {
             if (KitArrays.kangaUsed.contains(e.getPlayer().getName())) {
-                if (p.getInventory().getItemInMainHand().getType() == Material.FIREWORK) {
+                if (p.getItemInHand().getType() == Material.FIREWORK) {
                     e.setCancelled(true);
                     if (!(jumped.containsKey(p))) {
                         if (!(p.isSneaking())) {

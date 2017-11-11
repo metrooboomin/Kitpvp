@@ -54,7 +54,6 @@ private static KitPvP instance;
         getCommand("pvp").setExecutor(new PvP());
         getCommand("archer").setExecutor(new Archer());
         getCommand("tamer").setExecutor(new Tamer());
-        getCommand("lol").setExecutor(new stimpay());
 
 
         //DONOR KITS

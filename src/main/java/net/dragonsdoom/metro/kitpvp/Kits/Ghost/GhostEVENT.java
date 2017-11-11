@@ -39,7 +39,7 @@ public class GhostEVENT implements Listener {
     public void GhostUse(PlayerInteractEvent event) {
         final Player player = event.getPlayer();
         if(KitArrays.ghostUsed.contains(player.getName())) {
-            if (player.getInventory().getItemInMainHand().getType() == Material.CLAY_BALL) {
+            if (player.getItemInHand().getType() == Material.CLAY_BALL) {
                 if (event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) {
                     if (KitArrays.ghostWAIT.contains(player.getName())){
                         player.sendMessage(ChatColor.RED + "Ghost Ability is currently on cooldown!");

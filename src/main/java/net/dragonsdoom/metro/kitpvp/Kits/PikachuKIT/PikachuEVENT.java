@@ -23,9 +23,9 @@ public class PikachuEVENT implements Listener {
         ItemMeta thundermeta = (ItemMeta) Thundershock.getItemMeta();
         thundermeta.setDisplayName(ChatColor.RED + "Thundershock");
         final Player p = (Player) e.getPlayer();
-        if(p.getInventory().getItemInMainHand().hasItemMeta()){
-            if(p.getInventory().getItemInMainHand().getItemMeta().hasDisplayName()){
-                if(p.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.RED + "Thundershock")){
+        if(p.getItemInHand().hasItemMeta()){
+            if(p.getItemInHand().getItemMeta().hasDisplayName()){
+                if(p.getItemInHand().getItemMeta().getDisplayName().equals(ChatColor.RED + "Thundershock")){
                     if(e.getAction().equals(Action.RIGHT_CLICK_BLOCK)){
                         if (KitArrays.pikaUsed.contains(p.getName())){
                             if (KitArrays.pikaWAIT.contains(p.getName())){
